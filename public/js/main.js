@@ -16,7 +16,7 @@ const getInfo = async (event) => {
     }
     else {
         try {
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=e9078d43d74129f6ec58a63b8e37d358`;
+            let url = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=e9078d43d74129f6ec58a63b8e37d358`;
             const response = await fetch(url);
             const data = await response.json();
             const arrData = [data];
